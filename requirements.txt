@@ -1,0 +1,47 @@
+# Using requests to the NetBox API
+requests
+
+# Requirements
+pytest
+pylint
+black
+
+# https://blog.wimwauters.com/networkprogrammability/2020-09-29_nornir3.0_introduction/
+nornir
+nornir_napalm
+nornir_netmiko
+nornir_netbox
+nornir_ansible
+nornir_scrapli
+nornir_utils
+nornir_jinja2
+
+# https://github.com/Pzharyuk/nb_nornir
+Jinja2==2.11.2
+napalm==3.2.0
+ncclient==0.6.9
+netaddr==0.8.0
+netmiko==3.3.0
+nornir==3.0.0
+nornir-ansible==2020.7.20
+nornir-jinja2==0.1.0
+nornir-napalm==0.1.1
+nornir-netbox==0.1.1
+nornir-netmiko==0.1.1
+nornir-scrapli==2020.9.16.post1
+nornir-utils==0.1.0
+paramiko==2.7.2
+PyYAML==5.3.1
+requests==2.24.0
+rich==8.0.0
+scrapli==2020.8.28
+python-dotenv==0.14.0  
+pynetbox
+
+# Final list
+nornir
+nornir-netbox
+nornir-netmiko
+nornir-utils
+nornir-napalm
+python-dotenv

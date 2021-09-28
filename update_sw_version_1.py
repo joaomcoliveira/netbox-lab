@@ -41,9 +41,7 @@ def get_devices():
     return get_url("dcim/devices/?status=active&tenant=noc")
 
 
-#
 # Main function
-#
 if __name__ == "__main__":
     
     response = get_devices()
