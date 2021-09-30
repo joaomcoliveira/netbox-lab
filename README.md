@@ -31,8 +31,12 @@ Install required Python packages with:
 
     $ pip install -r requirements.txt
 
-6. Populate .env file with NetBox url and token.
+6. Create and populate an .env file with NetBox URL and token:
 
-7. Execute python file
+    NB_URL=
+    NB_TOKEN= 
 
+7. Execute Python file:
+
+    $ python3 nb_update_sw_dev_field.py
 
