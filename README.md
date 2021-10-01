@@ -33,10 +33,10 @@ Install required Python packages with:
 
 6. Create and populate an .env file with NetBox URL and token:
 
-    NB_URL=
-    NB_TOKEN= 
+    NB_URL=http://urlexample:8000
+    NB_TOKEN=tokenexample0123456789
 
 7. Execute Python file:
 
-    $ python3 nb_update_sw_dev_field.py
+    $ python3 runbook.py
 
