@@ -45,7 +45,7 @@ This program uses environment variables that should be set in a `.env` file, suc
 
 ## Testing
 
-This project was tested on virtual appliances Cisco IOSv, ASAv, Arista vEOS and ArubaOS CX Virtual, although NAPALM's get_facts method should work as well for Junos, IOS-XR and NX-OS.
+This project was tested on virtual appliances Cisco IOSv, ASAv, Arista vEOS and ArubaOS CX Virtual.
 
 A `Makefile` is used for the following targets:
 
