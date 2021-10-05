@@ -31,7 +31,7 @@ def main():
                 "nb_url": h.NB_URL,
                 "nb_token": h.NB_TOKEN,
                 "ssl_verify": False,  # Ignore verification of SSL certificate, if using https
-                "defaults_file": h.NORNIR_DEFAULTS_FILEPATH,  # Path to file with the default definitions
+                "defaults_file": "inventory/defaults.yaml",  # Path to file with the default definitions
                 "filter_parameters": h.NB_FILTER_PARAMS,  # Filter inventory data
             },
         },

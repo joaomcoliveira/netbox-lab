@@ -21,7 +21,6 @@ load_dotenv()
 NB_URL = os.getenv("NB_URL")
 NB_TOKEN = os.getenv("NB_TOKEN")
 NB_CUSTOM_FIELD = os.getenv("NB_CUSTOM_FIELD")
-NORNIR_DEFAULTS_FILEPATH = os.getenv("NORNIR_DEFAULTS_FILEPATH")
 NB_FILTER_PARAMS = {}
 with open("inventory/filter_params.json", "r") as handle:
     try:
@@ -136,17 +135,6 @@ def validate_nb_custom_field(custom_field):
     # Ensure NetBox custom_field is present
     if custom_field == "":
         print("Missing custom_field to update")
-        return False
-    return True
-
-
-def validate_nornir_defaults_filepath(defaults_filepath):
-    """
-    Validate Nornir defaults file path environment variable
-    """
-    # Ensure Nornir defaults filepath is present
-    if defaults_filepath == "":
-        print("Missing defaults file path")
         return False
     return True
 

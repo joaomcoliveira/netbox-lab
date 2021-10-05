@@ -29,13 +29,6 @@ def test_validate_nb_custom_field():
     assert h.validate_nb_custom_field(h.NB_CUSTOM_FIELD)
 
 
-def test_validate_nornir_defaults_filepath():
-    """
-    Test validation of Nornir defaults filepath
-    """
-    assert h.validate_nornir_defaults_filepath(h.NORNIR_DEFAULTS_FILEPATH)
-
-
 def test_validate_nb_filter_params():
     """
     Test validation of NetBox inventory filter params JSON file

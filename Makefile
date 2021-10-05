@@ -1,10 +1,10 @@
 # Makefile to run below targets
 
-# Default goal runs the "test" target
-.DEFAULT_GOAL := test
+# Default goal runs the "all" target
+.DEFAULT_GOAL := all
 
-.PHONY: test
-test: clean lint unit
+.PHONY: all
+all: clean lint test
 
 .PHONY: lint
 lint:
@@ -13,8 +13,8 @@ lint:
 	find . -name "*.py" | xargs black
 	@echo "Completed lint"
 
-.PHONY: unit
-unit:
+.PHONY: test
+test:
 	@echo "Starting unit tests"
 	python3 -m pytest tests/ --verbose
 	@echo "Completed unit tests"
