@@ -122,7 +122,7 @@ def validate_nb_token(token):
     Validate NetBox API token environment variable
     """
     # Ensure NetBox API token is present
-    if token == "":
+    if token == "" or token is None:
         print("Missing API token")
         return False
     return True
@@ -133,7 +133,7 @@ def validate_nb_custom_field(custom_field):
     Validate NetBox custom field environment variable
     """
     # Ensure NetBox custom_field is present
-    if custom_field == "":
+    if custom_field == "" or custom_field is None:
         print("Missing custom_field to update")
         return False
     return True
@@ -149,9 +149,9 @@ def validate_nb_filter_params(filter_params):
             # Attempt to load the JSON data into Python objects
             json.load(filepath)
             return True
-        except json.decoder.JSONDecodeError as exc:
+        except json.decoder.JSONDecodeError as exception:
             # Print specific file and error condition, mark failure
-            print(f"{filter_params}: {exc}")
+            print(f"{filter_params}: {exception}")
             return False
 
 
