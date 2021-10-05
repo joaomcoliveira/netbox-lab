@@ -45,3 +45,5 @@ nornir-netmiko
 nornir-utils
 nornir-napalm
 python-dotenv
+pynetbox
+requests

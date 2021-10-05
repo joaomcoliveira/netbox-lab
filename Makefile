@@ -9,8 +9,8 @@ test: clean lint unit
 .PHONY: lint
 lint:
 	@echo "Starting lint"
-	find . -name "*.py" | xargs pylint
-	find . -name "*.py" | xargs black -l 85 --check
+	-find . -name "*.py" | xargs pylint
+	find . -name "*.py" | xargs black
 	@echo "Completed lint"
 
 .PHONY: unit
