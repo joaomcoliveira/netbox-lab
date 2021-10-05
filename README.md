@@ -8,7 +8,7 @@ The project is built on the following components:
 - NAPALM, a library to interact with different network OS through several methods.
 - Netmiko, a SSH library to access network devices' command lines.
 
-Software version info is pulled from the devices with two methods:
+Software version info is pulled from the devices in two ways:
 1. NAPALM, using a get_facts method on supported devices (such as Cisco IOS, IOS-XR, NX-OS, Arista vEOS and Junos)
 2. Netmiko, grabbing a filtered output from a platform-specific CLI command
 
