@@ -78,22 +78,13 @@ def main():
         task=t.napalm_get_sw_version,
     )
 
-    # Print results of task
-    print(results)
-
     results = asa_devices.run(
         name="Get software version on Cisco ASA devices", task=t.asa_get_sw_version
     )
 
-    # Print results of task
-    print(results)
-
     results = aruba_devices.run(
         name="Get software version on ArubaOS devices", task=t.aruba_get_sw_version
     )
-
-    # Print results of task
-    print(results)
 
 
 if __name__ == "__main__":

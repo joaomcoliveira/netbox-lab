@@ -25,8 +25,8 @@ Note: Platform attribute in NetBox must match one of Netmiko or NAPALM available
 
 1. Clone repository: `git clone https://github.com/joaomcoliveira/netbox-lab`
 2. Change directory to netbox-lab: `cd netbox-lab`
-3. Create a Python virtual environment: `python3 -m venv ~/netbox-lab`
-4. Activate the virtual environment: `source ~/netbox-lab/bin/activate`
+3. Create a Python virtual environment: `python3 -m venv ~/virtualenvs/netbox-lab`
+4. Activate the virtual environment: `source ~/virtualenvs/netbox-lab/bin/activate`
 5. Install required Python packages via pip: `pip install -r requirements.txt`
 6. Type `make` and ensure all tests pass
 
