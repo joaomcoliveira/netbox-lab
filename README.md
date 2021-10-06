@@ -53,3 +53,8 @@ A `Makefile` is used for the following targets:
 - `test`: Runs unit tests on helper functions via `pytest`
 - `clean`: Deletes `.pyc` and `.log` files
 - `all`: Default target that runs the sequence `clean lint test`
+
+
+## Output
+
+Program prints all hostnames in NetBox environment (filters may apply). From this inventory, it then prints the NAPALM and Netmiko supported devices, software version running on each device and whether the custom field in NetBox was updated.
