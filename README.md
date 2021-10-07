@@ -57,4 +57,4 @@ A `Makefile` is used for the following targets:
 
 ## Output
 
-Program prints all hostnames in NetBox environment (filters may apply). From this inventory, it then prints NAPALM and Netmiko supported devices and the results from Nornir's tasks, which include getting the software version running on each device and update NetBox custom field with it.
+Program prints all hostnames in NetBox environment (filters may apply). From this inventory, it then prints NAPALM and Netmiko supported devices and the results from Nornir's tasks, which include getting the software version running on each device and updating NetBox custom field with it.
