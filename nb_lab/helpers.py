@@ -52,10 +52,16 @@ def update_custom_field(dev_name, os_version):
 
     if NB_CUSTOM_FIELD in device.custom_fields.keys():
         # Custom field exists
-        if device.update({"custom_fields": {NB_CUSTOM_FIELD: os_version}}):
-            print(f'{dev_name}: NetBox "{NB_CUSTOM_FIELD}" updated with "{os_version}"')
-        else:
-            print(f'{dev_name}: NetBox "{NB_CUSTOM_FIELD}" not updated')
+        try:
+            if device.update({"custom_fields": {NB_CUSTOM_FIELD: os_version}}):
+                print(
+                    f'{dev_name}: NetBox "{NB_CUSTOM_FIELD}" updated with "{os_version}"'
+                )
+            else:
+                print(f'{dev_name}: NetBox "{NB_CUSTOM_FIELD}" not updated')
+        except pynetbox.RequestError as err:
+            print("Error processing request", err.error)
+            sys.exit(1)
     else:
         # Custom field does not exist, need to first create it
         try:
@@ -69,7 +75,7 @@ def update_custom_field(dev_name, os_version):
                         "description": "",
                         "required": False,
                         "filter_logic": "loose",
-                        "default": os_version,
+                        "default": "",
                         "weight": 100,
                         "validation_minimum": None,
                         "validation_maximum": None,
@@ -78,6 +84,8 @@ def update_custom_field(dev_name, os_version):
                     }
                 ]
             )
+            # Then, update field
+            device.update({"custom_fields": {NB_CUSTOM_FIELD: os_version}})
             print(f'{dev_name}: NetBox "{NB_CUSTOM_FIELD}" updated with "{os_version}"')
         except pynetbox.RequestError as err:
             print("Error processing request", err.error)

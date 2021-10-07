@@ -6,6 +6,7 @@ Main file to run the application
 
 from nornir import InitNornir
 from nornir.core.filter import F
+from nornir_utils.plugins.functions import print_result
 import nb_lab.tasks as t
 import nb_lab.helpers as h
 
@@ -78,13 +79,19 @@ def main():
         task=t.napalm_get_sw_version,
     )
 
+    print_result(results)
+
     results = asa_devices.run(
         name="Get software version on Cisco ASA devices", task=t.asa_get_sw_version
     )
 
+    print_result(results)
+
     results = aruba_devices.run(
         name="Get software version on ArubaOS devices", task=t.aruba_get_sw_version
     )
+
+    print_result(results)
 
 
 if __name__ == "__main__":

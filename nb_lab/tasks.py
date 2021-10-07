@@ -21,9 +21,6 @@ def aruba_get_sw_version(task):
     # Assign os_version from the output of netmiko_send_command
     os_version = res.result
 
-    # Print os_version
-    print(f"{task.host}: {os_version}")
-
     # Call update_custom_field function
     update_custom_field(f"{task.host}", os_version)
 
@@ -40,9 +37,6 @@ def asa_get_sw_version(task):
     # Assign os_version from the output of netmiko_send_command
     os_version = res.result
 
-    # Print os_version
-    print(f"{task.host}: {os_version}")
-
     # Call update_custom_field function
     update_custom_field(f"{task.host}", os_version)
 
@@ -57,9 +51,6 @@ def napalm_get_sw_version(task):
 
     # Assign os_version from get_facts
     os_version = res.result["facts"]["os_version"]
-
-    # Print os_version
-    print(f"{task.host}: {os_version}")
 
     # Call update_custom_field function
     update_custom_field(f"{task.host}", os_version)
